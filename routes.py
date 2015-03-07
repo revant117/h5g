@@ -7,10 +7,14 @@ import os
 
 app = Flask(__name__,static_folder='static', static_url_path='')
 
-
 @app.route('/')
 def home():
+  return render_template('index.html')
+
+@app.route('/game1')
+def game1():
   return render_template('part9.html')
+
 
 
 
